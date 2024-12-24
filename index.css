@@ -1,0 +1,90 @@
+@import url(./res/stylesheets/animations.css);
+@import url(./res/stylesheets/custom_basic_elements.css);
+@import url(./res/stylesheets/colors.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
+
+* {
+    /* outline: red solid; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-0);
+    color: var(--font-0);
+    
+    font-size: 1.5rem;
+    
+    margin: 0;
+}
+
+/* Sidebar Styles START */
+.sidebar {
+    background-color: var(--bg-1);
+
+    font-family: "Playwrite IE";
+    font-weight: bold;
+
+    height: calc(100% - 2rem);
+    width: 20%;
+    min-width: fit-content;
+
+    margin: 1rem;
+    padding: 0 1rem;
+
+    border-radius: 2rem;
+
+    position: fixed;
+
+    box-shadow: #ed8796 3px 3px 2px, #f5a97f 6px 6px 2px, #a6da95 9px 9px 2px, #91d7e3 12px 12px 2px, #8aadf4 15px 15px 2px
+}
+
+.avatar-box {
+    display: flex;
+    justify-content: center;
+
+    margin: 4rem 0;
+}
+
+.avatar-box img {
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 100%;
+}
+
+.index ul li {
+    width: auto;
+
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+    border-radius: 1rem;
+
+    background: linear-gradient(var(--accent), var(--accent));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s;
+}
+
+.index ul li:hover, .index ul li:active {
+    background-size: 100%;
+}
+/* Sidebar Styles END */
+
+/* Content Styles START */
+.content {
+    margin-left: calc(20% + 5rem);
+    padding: 0;
+    scroll-snap-type: both proximity;
+}
+/* Content Styles END */
+
+.page {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    width: 100%;
+}
