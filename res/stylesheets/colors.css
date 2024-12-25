@@ -2,7 +2,12 @@
     --bg-0: hsl(0, 0%, 7%);
     --bg-1: hsl(0, 0%, 15%);
 
-    --font-0: gold;
+    --font-0: hsl(56, 65%, 68%);
 
-    --accent: hsl(169, 82%, 64%);
+    --accent-0: #f5bde6;
+    --accent-1: #ed8796;
+    --accent-2: #f5a97f;
+    --accent-3: #a6da95;
+    --accent-4: #91d7e3;
+    --accent-5: #8aadf4;
 }

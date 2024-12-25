@@ -1,12 +1,12 @@
-@import url(./res/stylesheets/animations.css);
-@import url(./res/stylesheets/custom_basic_elements.css);
-@import url(./res/stylesheets/colors.css);
+@import url(/res/stylesheets/animations.css);
+@import url(/res/stylesheets/custom_basic_elements.css);
+@import url(/res/stylesheets/colors.css);
+@import url(/res/stylesheets/fonts.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
 
-* {
-    /* outline: red solid; */
-}
+/* * {
+    outline: red solid;
+} */
 
 html {
     scroll-behavior: smooth;
@@ -17,6 +17,7 @@ body {
     color: var(--font-0);
     
     font-size: 1.5rem;
+    font-family: "Karla";
     
     margin: 0;
 }
@@ -29,7 +30,7 @@ body {
     font-weight: bold;
 
     height: calc(100% - 2rem);
-    width: 20%;
+    width: 18%;
     min-width: fit-content;
 
     margin: 1rem;
@@ -39,7 +40,18 @@ body {
 
     position: fixed;
 
-    box-shadow: #ed8796 3px 3px 2px, #f5a97f 6px 6px 2px, #a6da95 9px 9px 2px, #91d7e3 12px 12px 2px, #8aadf4 15px 15px 2px
+    box-shadow:
+    var(--accent-0)  4px 0,
+    var(--bg-0)      8px 0,
+    var(--accent-1) 12px 0,
+    var(--bg-0)     16px 0,
+    var(--accent-2) 20px 0,
+    var(--bg-0)     24px 0,
+    var(--accent-3) 28px 0,
+    var(--bg-0)     32px 0,
+    var(--accent-4) 36px 0,
+    var(--bg-0)     40px 0,
+    var(--accent-5) 44px 0;
 }
 
 .avatar-box {
@@ -56,7 +68,7 @@ body {
     border-radius: 100%;
 }
 
-.index ul li {
+.index ul a li {
     width: auto;
 
     margin: 1rem 0;
@@ -64,20 +76,21 @@ body {
 
     border-radius: 1rem;
 
-    background: linear-gradient(var(--accent), var(--accent));
+    background: linear-gradient(var(--font-0), var(--font-0));
     background-size: 0%;
     background-repeat: no-repeat;
     transition: background-size 0.2s;
 }
 
-.index ul li:hover, .index ul li:active {
+.index ul a li:hover, .index ul li:active {
     background-size: 100%;
+    color: black;
 }
 /* Sidebar Styles END */
 
 /* Content Styles START */
 .content {
-    margin-left: calc(20% + 5rem);
+    margin-left: calc(18% + 5rem + 44px);
     padding: 0;
     scroll-snap-type: both proximity;
 }
