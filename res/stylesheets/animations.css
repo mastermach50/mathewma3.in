@@ -1,15 +1,53 @@
-.spin {
-    animation-name: spin-inf;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes spin-inf {
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes backInLeftAndShadowExpand {
+    0% {
+        box-shadow: none;
+        transform: translateX(-2000px) scale(0.9);
+        opacity: 0.6;
+    }
+    
+    /* Moved into view */
+    50% {
+        box-shadow: none;
+        transform: translateX(0px) scale(0.9);
+        opacity: 0.6;
+    }
+    
+    /* Scaled to size with opacity increase*/
+    70% {
+        box-shadow: none;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Borders slide in */
+    100% {
+        box-shadow: var(--elegant-shadow);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

@@ -10,4 +10,17 @@
     --accent-3: #a6da95;
     --accent-4: #91d7e3;
     --accent-5: #8aadf4;
+
+    --elegant-shadow:
+        var(--accent-0)  4px 0,
+        var(--bg-0)      8px 0,
+        var(--accent-1) 12px 0,
+        var(--bg-0)     16px 0,
+        var(--accent-2) 20px 0,
+        var(--bg-0)     24px 0,
+        var(--accent-3) 28px 0,
+        var(--bg-0)     32px 0,
+        var(--accent-4) 36px 0,
+        var(--bg-0)     40px 0,
+        var(--accent-5) 44px 0;
 }

@@ -8,17 +8,13 @@
     outline: red solid;
 } */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: var(--bg-0);
     color: var(--font-0);
     
     font-size: 1.5rem;
     font-family: "Karla";
-    
+
     margin: 0;
 }
 
@@ -40,18 +36,9 @@ body {
 
     position: fixed;
 
-    box-shadow:
-    var(--accent-0)  4px 0,
-    var(--bg-0)      8px 0,
-    var(--accent-1) 12px 0,
-    var(--bg-0)     16px 0,
-    var(--accent-2) 20px 0,
-    var(--bg-0)     24px 0,
-    var(--accent-3) 28px 0,
-    var(--bg-0)     32px 0,
-    var(--accent-4) 36px 0,
-    var(--bg-0)     40px 0,
-    var(--accent-5) 44px 0;
+    animation: backInLeftAndShadowExpand 0.7s;
+
+    box-shadow: var(--elegant-shadow);
 }
 
 .avatar-box {
@@ -65,6 +52,8 @@ body {
     width: 10rem;
     height: 10rem;
 
+    animation: spin 15s linear infinite;
+
     border-radius: 100%;
 }
 
@@ -76,15 +65,19 @@ body {
 
     border-radius: 1rem;
 
-    background: linear-gradient(var(--font-0), var(--font-0));
-    background-size: 0%;
-    background-repeat: no-repeat;
-    transition: background-size 0.2s;
+    transition: 0.2s;
 }
 
-.index ul a li:hover, .index ul li:active {
-    background-size: 100%;
+.index ul a:focus {
+    outline: none;
+}
+
+.index ul a li:hover, .index ul a:focus li, .index ul a[in_view] li {
+    background-color: var(--font-0);
     color: black;
+
+    transform: translateY(-0.5rem);
+    box-shadow: white 0 0.5rem;
 }
 /* Sidebar Styles END */
 
@@ -92,12 +85,27 @@ body {
 .content {
     margin-left: calc(18% + 5rem + 44px);
     padding: 0;
-    scroll-snap-type: both proximity;
+    
+    height: 100vh;
+    overflow: scroll;
+    
+    animation: fadeIn 0.7s;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
 }
-/* Content Styles END */
 
 .page {
     scroll-snap-align: start;
+    
+    position: relative;
+
+    
     min-height: 100vh;
     width: 100%;
 }
+
+#projects {
+    height: 200vh;
+}
+/* Content Styles END */
