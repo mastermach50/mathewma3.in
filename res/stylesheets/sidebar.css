@@ -1,0 +1,65 @@
+.sidebar {
+    background-color: var(--bg-1);
+
+    font-family: "Playwrite IE";
+    font-weight: bold;
+
+    box-sizing: border-box;
+
+    overflow-y: scroll;
+
+    height: calc(100% - 2*var(--sidebar-margin));
+    width: var(--sidebar-width);
+    min-width: fit-content;
+
+    margin: var(--sidebar-margin);
+    padding: 0 1rem;
+
+    border-radius: 2rem;
+
+    position: fixed;
+
+    animation: backInLeftAndShadowExpand 1s;
+
+    box-shadow: var(--elegant-shadow);
+}
+
+.avatar-box {
+    display: flex;
+    justify-content: center;
+
+    margin: 4rem 0;
+}
+
+.avatar-box img {
+    width: 8rem;
+    height: 8rem;
+
+    animation: spin 120s linear infinite;
+
+    border-radius: 100%;
+}
+
+.index ul a li {
+    width: auto;
+
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+    border-radius: 1rem;
+
+    transition: 0.2s;
+}
+
+.index ul a:focus {
+    outline: none; /* Remove outline that appears when focused on it using keyboard */
+}
+
+.index ul a li:hover, .index ul a:focus li, .index ul a[in_view] li {
+    background-color: var(--font-0);
+    color: var(--bg-1);
+
+    /* Make it look like a big button */
+    transform: translateY(-0.5rem);
+    box-shadow: white 0 0.5rem;
+}

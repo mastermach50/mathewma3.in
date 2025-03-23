@@ -1,0 +1,41 @@
+#Home {
+}
+
+#Home .webring-box {
+    position: absolute;
+    bottom: 0;
+
+    display: inline-flex;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 2rem 0;
+
+}
+
+#Home .webring-box div {
+    min-width: 2rem;
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+
+#Home .webring-box div:hover {
+    color: var(--bg-0);
+    background-color: var(--font-1);
+
+    transform: translateY(-0.5rem);
+    box-shadow: white 0 0.5rem;
+}
+
+#Home .welcome-msg {
+    position: absolute;
+    top: 50%;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    width: 100%;
+
+    text-align: center;
+}

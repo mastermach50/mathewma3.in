@@ -3,6 +3,7 @@
     --bg-1: hsl(0, 0%, 15%);
 
     --font-0: hsl(56, 65%, 68%);
+    --font-1: hsl(189, 65%, 64%);
 
     --accent-0: #f5bde6;
     --accent-1: #ed8796;
@@ -23,4 +24,7 @@
         var(--accent-4) 36px 0,
         var(--bg-0)     40px 0,
         var(--accent-5) 44px 0;
+    
+    --sidebar-width: 20%;
+    --sidebar-margin: 1rem;
 }
